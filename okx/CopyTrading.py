@@ -71,3 +71,30 @@ class CopyTradingAPI(OkxClient):
     # Get unrealized profit sharing details
     def get_unrealized_profit_sharing_details(self):
         return self._request_without_params(GET, GET_UNREALIZED_PROFIT_SHARING_DETAILS)
+
+    # POST FIRST_COPY_SETTINGS
+    def first_copy_settings(self, name='', copymode='SMART_COPY', amount='100'):
+        params = {
+            'traderUniqueName': name,
+            'copyMode': copymode,
+            'initialAmount': amount,
+            'replicationRequired': '1',
+            'stopLossAmount': '',
+            'remainMgnDeal': '1',
+            'privateCopyLinkId': ''
+        }
+        return self._request_with_params(POST, FIRST_COPY_SETTINGS, params)
+
+    def first_copy_settings1(self, name='', amount='100'):
+        params = {
+            'uniqueCode': name,
+            # 'copyMode': copymode,
+            # 'instType': 'SWAP',
+            'copyAmt': '50',
+            'copyTotalAmt': amount,
+            'remainMgnDeal': '1',
+            'copyInstIdType': 'copy',
+            'copyMgnMode': 'isolated',
+            'subPosCloseType': 'copy_close'
+        }
+        return self._request_with_params(POST, FIRST_COPY_SETTINGS1, params)

@@ -276,6 +276,8 @@ AMEND_EXISTING_LEADING_POSITIONS = '/api/v5/copytrading/set-instruments'
 GET_PROFIT_SHARING_DETAILS = '/api/v5/copytrading/profit-sharing-details'
 GET_TOTAL_PROFIT_SHARING = '/api/v5/copytrading/total-profit-sharing'
 GET_UNREALIZED_PROFIT_SHARING_DETAILS = '/api/v5/copytrading/unrealized-profit-sharing-details'
+FIRST_COPY_SETTINGS = '/priapi/v5/ecotrade/copier/first-settings'
+FIRST_COPY_SETTINGS1 = '/api/v5/copytrading/first-copy-settings'
 
 # Spread Trading˚
 SPREAD_PLACE_ORDER= '/api/v5/sprd/order'
